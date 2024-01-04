@@ -9,25 +9,9 @@
    hello-world:
      runs-on: ubuntu-18.04
      steps:
-     - name: Install dependencies 📦
-#       Using npm ci is generally faster than running npm install
+     - name: Echo the message
        run: |
-         cd my-app
-         npm ci
-     - name: Build the app 🏗
-       run: |
-         cd my-app
-         npm run build
-     - name: Run component tests 🔸
-       run: |
-         cd my-app
-         npm run test
-     - name: Start the app 📤
-       run: |
-         cd my-app
-         npm start &
-         npx wait-on --timeout 60000
-     - name: Run visual tests 👁
-       run: |
-         cd my-app
-         npm run test:visual
+        echo "Hola Jesus David"
+     - name: Dime la fecha
+       run: Date
+     - run: ls -l
