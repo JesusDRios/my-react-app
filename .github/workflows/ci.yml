@@ -13,5 +13,5 @@
        run: |
         echo "Hola Jesus David"
      - name: Dime la fecha
-       run: Date
+       run: date
      - run: ls -l
