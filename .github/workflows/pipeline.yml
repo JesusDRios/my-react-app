@@ -14,6 +14,10 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                 node-version: 18
+            - name: Install Rimraf
+              run: npm install rimraf -g
+            - name: Clean env
+              run: rimraf --glob .\**\node_modules
             - name: Install dependencies
               run: npm install --no-audit --no-fund --no-optional
             - name: Lint
